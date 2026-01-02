@@ -13,6 +13,10 @@ fn main() {
     let y: i32 = add(4, 6);
     println!("The value of Y is {}", y);
     println!("The value of function add() is: {}", add(3,2));
+
+    //calling the BMI function
+    let my_bmi = calculate_bmi(92.22, 1.7272);
+    println!("My BMI is: {:.2}", my_bmi);
 }
 
 //hoisting allows us to call functions from anywhere
@@ -38,4 +42,15 @@ fn add(a: i32, b: i32) -> i32{
 //Expressions and Statements
 //Expression: Anything that returns a value
 //Statement: Anything that does not return a value
+//Statement:  Almost all statements in Rust end with ;
+// let y = let x = 10;
+// 1 Variable declaration: let x= 5;
+// 2 function definitions: fn foo(){}
+// 3 Control flow statements: if condition { code } else { code }, while condition { code }, etc
 //Expression examples: 5, true & false, add(3,4), if/else condition, ({code})
+
+//final example
+// BMI = height (kg)/height(m)^2
+fn calculate_bmi(weight_kg: f64, height_m: f64) -> f64 {
+    weight_kg/(height_m * height_m)
+}
